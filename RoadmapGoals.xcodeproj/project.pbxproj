@@ -1,0 +1,364 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 63;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		31BA5E8201DA197A3AD599A8 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172DD97BD07C953014982AD8 /* Goal.swift */; };
+		36DD6D14118F76405AAE1C3C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F733679AC9AE1E2D6BE4E238 /* Preview Assets.xcassets */; };
+		53FC8C04C518A0F1A9463225 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D601B2F11EDA51FD852A3DC /* SettingsView.swift */; };
+		59970206ECAA2B14E838F28E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C22E67BF3655AB8BA4C73D /* Assets.xcassets */; };
+		66B8B883AC90ED97AD3E01C6 /* GoalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3742D2235469EA2D8127EEA /* GoalStore.swift */; };
+		7B58C0EEFC99732AB0913D86 /* AddGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6DDA42F9A9F85B5F28D6E2 /* AddGoalView.swift */; };
+		81B193AB8B94079C06BAD42D /* RoadmapGoalsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82690041605C60B9D26C972 /* RoadmapGoalsApp.swift */; };
+		BE3219501AC105E8124523E7 /* EditGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3A48EA8AF64150422B3D50 /* EditGoalView.swift */; };
+		C3C85F869BBC26BD37B57419 /* RoadmapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D77C85372716EEA50E17BE /* RoadmapView.swift */; };
+		DD1DA36548BC723118A83E48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC478BE2E75ABC5BA49C1F0 /* ContentView.swift */; };
+		F4C9A0C49FA4C268158D4A92 /* GoalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61BCC49E54D716D859257C7 /* GoalListView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		172DD97BD07C953014982AD8 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+		1D601B2F11EDA51FD852A3DC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		1E9568728834F8D1A1B30E22 /* RoadmapGoals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoadmapGoals.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		85DF6F0B8BCE537E2DA5AE8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		89D77C85372716EEA50E17BE /* RoadmapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadmapView.swift; sourceTree = "<group>"; };
+		8B6DDA42F9A9F85B5F28D6E2 /* AddGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalView.swift; sourceTree = "<group>"; };
+		9B3A48EA8AF64150422B3D50 /* EditGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGoalView.swift; sourceTree = "<group>"; };
+		A82690041605C60B9D26C972 /* RoadmapGoalsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadmapGoalsApp.swift; sourceTree = "<group>"; };
+		B61BCC49E54D716D859257C7 /* GoalListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalListView.swift; sourceTree = "<group>"; };
+		CBC478BE2E75ABC5BA49C1F0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D3742D2235469EA2D8127EEA /* GoalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalStore.swift; sourceTree = "<group>"; };
+		D8C22E67BF3655AB8BA4C73D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F733679AC9AE1E2D6BE4E238 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		85EF93829DBF496E776BF1A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E9568728834F8D1A1B30E22 /* RoadmapGoals.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ACB8AABEA53BE4D22AC5C872 = {
+			isa = PBXGroup;
+			children = (
+				BA23CF84ED2FEBB168F13CFC /* RoadmapGoals */,
+				85EF93829DBF496E776BF1A4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BA23CF84ED2FEBB168F13CFC /* RoadmapGoals */ = {
+			isa = PBXGroup;
+			children = (
+				8B6DDA42F9A9F85B5F28D6E2 /* AddGoalView.swift */,
+				D8C22E67BF3655AB8BA4C73D /* Assets.xcassets */,
+				CBC478BE2E75ABC5BA49C1F0 /* ContentView.swift */,
+				9B3A48EA8AF64150422B3D50 /* EditGoalView.swift */,
+				172DD97BD07C953014982AD8 /* Goal.swift */,
+				B61BCC49E54D716D859257C7 /* GoalListView.swift */,
+				D3742D2235469EA2D8127EEA /* GoalStore.swift */,
+				85DF6F0B8BCE537E2DA5AE8F /* Info.plist */,
+				A82690041605C60B9D26C972 /* RoadmapGoalsApp.swift */,
+				89D77C85372716EEA50E17BE /* RoadmapView.swift */,
+				1D601B2F11EDA51FD852A3DC /* SettingsView.swift */,
+				FA13D0700CD3B168BF72AB75 /* Preview Content */,
+			);
+			path = RoadmapGoals;
+			sourceTree = "<group>";
+		};
+		FA13D0700CD3B168BF72AB75 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F733679AC9AE1E2D6BE4E238 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		78CB46876FC421BC7A5B4E2D /* RoadmapGoals */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDFB7DB7EAD68F821138A660 /* Build configuration list for PBXNativeTarget "RoadmapGoals" */;
+			buildPhases = (
+				02C6B59F34FA62FA5688B91D /* Sources */,
+				41CBA5954403DBA58C758643 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RoadmapGoals;
+			packageProductDependencies = (
+			);
+			productName = RoadmapGoals;
+			productReference = 1E9568728834F8D1A1B30E22 /* RoadmapGoals.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B12E993C1990EA965BF03A04 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = 005491F11CBAD8222FDF4472 /* Build configuration list for PBXProject "RoadmapGoals" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = ACB8AABEA53BE4D22AC5C872;
+			minimizedProjectReferenceProxies = 1;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				78CB46876FC421BC7A5B4E2D /* RoadmapGoals */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		41CBA5954403DBA58C758643 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59970206ECAA2B14E838F28E /* Assets.xcassets in Resources */,
+				36DD6D14118F76405AAE1C3C /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		02C6B59F34FA62FA5688B91D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B58C0EEFC99732AB0913D86 /* AddGoalView.swift in Sources */,
+				DD1DA36548BC723118A83E48 /* ContentView.swift in Sources */,
+				BE3219501AC105E8124523E7 /* EditGoalView.swift in Sources */,
+				31BA5E8201DA197A3AD599A8 /* Goal.swift in Sources */,
+				F4C9A0C49FA4C268158D4A92 /* GoalListView.swift in Sources */,
+				66B8B883AC90ED97AD3E01C6 /* GoalStore.swift in Sources */,
+				81B193AB8B94079C06BAD42D /* RoadmapGoalsApp.swift in Sources */,
+				C3C85F869BBC26BD37B57419 /* RoadmapView.swift in Sources */,
+				53FC8C04C518A0F1A9463225 /* SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		04F8E3339B7C7AC947F838EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = QQRH2ZMA5X;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RoadmapGoals/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RoadmapGoals;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pisoms.RoadmapGoals;
+				PRODUCT_NAME = RoadmapGoals;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		255903B0CF439BB54EDA3137 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		49A6035F8913B576FA7B5481 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		81A1B7468B8C302BCD027FBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = QQRH2ZMA5X;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RoadmapGoals/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RoadmapGoals;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pisoms.RoadmapGoals;
+				PRODUCT_NAME = RoadmapGoals;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		005491F11CBAD8222FDF4472 /* Build configuration list for PBXProject "RoadmapGoals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49A6035F8913B576FA7B5481 /* Debug */,
+				255903B0CF439BB54EDA3137 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EDFB7DB7EAD68F821138A660 /* Build configuration list for PBXNativeTarget "RoadmapGoals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81A1B7468B8C302BCD027FBB /* Debug */,
+				04F8E3339B7C7AC947F838EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B12E993C1990EA965BF03A04 /* Project object */;
+}
