@@ -1,5 +1,8 @@
 import Foundation
 import SwiftUI
+#if canImport(WidgetKit)
+import WidgetKit
+#endif
 
 class GoalStore: ObservableObject {
     @Published var goals: [Goal] = []
@@ -52,6 +55,9 @@ class GoalStore: ObservableObject {
             UserDefaults.standard.set(encoded, forKey: saveKey)
             UserDefaults.standard.synchronize() // Force immediate save
             print("✅ GoalStore.saveGoals: Successfully saved \(encoded.count) bytes")
+            
+            // Refresh widgets
+            refreshWidgets()
         } catch {
             print("❌ GoalStore.saveGoals: Failed to encode goals: \(error)")
         }
@@ -173,5 +179,13 @@ class GoalStore: ObservableObject {
     
     var overdueGoals: [Goal] {
         goals.filter { $0.isOverdue }
+    }
+    
+    // MARK: - Widget Support
+    
+    private func refreshWidgets() {
+        #if canImport(WidgetKit)
+        WidgetCenter.shared.reloadAllTimelines()
+        #endif
     }
 }

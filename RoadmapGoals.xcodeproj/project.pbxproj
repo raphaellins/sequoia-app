@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 63;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,9 @@
 		36DD6D14118F76405AAE1C3C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F733679AC9AE1E2D6BE4E238 /* Preview Assets.xcassets */; };
 		53FC8C04C518A0F1A9463225 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D601B2F11EDA51FD852A3DC /* SettingsView.swift */; };
 		59970206ECAA2B14E838F28E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C22E67BF3655AB8BA4C73D /* Assets.xcassets */; };
+		642709D72E5D034A00888845 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 642709D62E5D034A00888845 /* WidgetKit.framework */; };
+		642709D92E5D034A00888845 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 642709D82E5D034A00888845 /* SwiftUI.framework */; };
+		642709E82E5D034B00888845 /* RoadmapGoalsWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 642709D42E5D034A00888845 /* RoadmapGoalsWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		66B8B883AC90ED97AD3E01C6 /* GoalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3742D2235469EA2D8127EEA /* GoalStore.swift */; };
 		7B58C0EEFC99732AB0913D86 /* AddGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6DDA42F9A9F85B5F28D6E2 /* AddGoalView.swift */; };
 		81B193AB8B94079C06BAD42D /* RoadmapGoalsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82690041605C60B9D26C972 /* RoadmapGoalsApp.swift */; };
@@ -20,10 +23,39 @@
 		F4C9A0C49FA4C268158D4A92 /* GoalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61BCC49E54D716D859257C7 /* GoalListView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		642709E62E5D034B00888845 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B12E993C1990EA965BF03A04 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 642709D32E5D034A00888845;
+			remoteInfo = RoadmapGoalsWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		642709E92E5D034B00888845 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				642709E82E5D034B00888845 /* RoadmapGoalsWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		172DD97BD07C953014982AD8 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		1D601B2F11EDA51FD852A3DC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		1E9568728834F8D1A1B30E22 /* RoadmapGoals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoadmapGoals.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		642709D42E5D034A00888845 /* RoadmapGoalsWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RoadmapGoalsWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		642709D62E5D034A00888845 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		642709D82E5D034A00888845 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		642709EE2E5D03B600888845 /* RoadmapGoals.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RoadmapGoals.entitlements; sourceTree = "<group>"; };
+		642709EF2E5D04AB00888845 /* RoadmapGoalsWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RoadmapGoalsWidgetExtension.entitlements; sourceTree = "<group>"; };
 		85DF6F0B8BCE537E2DA5AE8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		89D77C85372716EEA50E17BE /* RoadmapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadmapView.swift; sourceTree = "<group>"; };
 		8B6DDA42F9A9F85B5F28D6E2 /* AddGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalView.swift; sourceTree = "<group>"; };
@@ -36,11 +68,47 @@
 		F733679AC9AE1E2D6BE4E238 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		642709EC2E5D034B00888845 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 642709D32E5D034A00888845 /* RoadmapGoalsWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		642709DA2E5D034A00888845 /* RoadmapGoalsWidget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (642709EC2E5D034B00888845 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = RoadmapGoalsWidget; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		642709D12E5D034A00888845 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				642709D92E5D034A00888845 /* SwiftUI.framework in Frameworks */,
+				642709D72E5D034A00888845 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
+		642709D52E5D034A00888845 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				642709D62E5D034A00888845 /* WidgetKit.framework */,
+				642709D82E5D034A00888845 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		85EF93829DBF496E776BF1A4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				1E9568728834F8D1A1B30E22 /* RoadmapGoals.app */,
+				642709D42E5D034A00888845 /* RoadmapGoalsWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,7 +116,10 @@
 		ACB8AABEA53BE4D22AC5C872 = {
 			isa = PBXGroup;
 			children = (
+				642709EF2E5D04AB00888845 /* RoadmapGoalsWidgetExtension.entitlements */,
 				BA23CF84ED2FEBB168F13CFC /* RoadmapGoals */,
+				642709DA2E5D034A00888845 /* RoadmapGoalsWidget */,
+				642709D52E5D034A00888845 /* Frameworks */,
 				85EF93829DBF496E776BF1A4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +127,7 @@
 		BA23CF84ED2FEBB168F13CFC /* RoadmapGoals */ = {
 			isa = PBXGroup;
 			children = (
+				642709EE2E5D03B600888845 /* RoadmapGoals.entitlements */,
 				8B6DDA42F9A9F85B5F28D6E2 /* AddGoalView.swift */,
 				D8C22E67BF3655AB8BA4C73D /* Assets.xcassets */,
 				CBC478BE2E75ABC5BA49C1F0 /* ContentView.swift */,
@@ -83,16 +155,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		642709D32E5D034A00888845 /* RoadmapGoalsWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 642709ED2E5D034B00888845 /* Build configuration list for PBXNativeTarget "RoadmapGoalsWidgetExtension" */;
+			buildPhases = (
+				642709D02E5D034A00888845 /* Sources */,
+				642709D12E5D034A00888845 /* Frameworks */,
+				642709D22E5D034A00888845 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				642709DA2E5D034A00888845 /* RoadmapGoalsWidget */,
+			);
+			name = RoadmapGoalsWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = RoadmapGoalsWidgetExtension;
+			productReference = 642709D42E5D034A00888845 /* RoadmapGoalsWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		78CB46876FC421BC7A5B4E2D /* RoadmapGoals */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDFB7DB7EAD68F821138A660 /* Build configuration list for PBXNativeTarget "RoadmapGoals" */;
 			buildPhases = (
 				02C6B59F34FA62FA5688B91D /* Sources */,
 				41CBA5954403DBA58C758643 /* Resources */,
+				642709E92E5D034B00888845 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				642709E72E5D034B00888845 /* PBXTargetDependency */,
 			);
 			name = RoadmapGoals;
 			packageProductDependencies = (
@@ -108,7 +204,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					642709D32E5D034A00888845 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+				};
 			};
 			buildConfigurationList = 005491F11CBAD8222FDF4472 /* Build configuration list for PBXProject "RoadmapGoals" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -124,6 +226,7 @@
 			projectRoot = "";
 			targets = (
 				78CB46876FC421BC7A5B4E2D /* RoadmapGoals */,
+				642709D32E5D034A00888845 /* RoadmapGoalsWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -135,6 +238,13 @@
 			files = (
 				59970206ECAA2B14E838F28E /* Assets.xcassets in Resources */,
 				36DD6D14118F76405AAE1C3C /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		642709D22E5D034A00888845 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,13 +267,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		642709D02E5D034A00888845 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		642709E72E5D034B00888845 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 642709D32E5D034A00888845 /* RoadmapGoalsWidgetExtension */;
+			targetProxy = 642709E62E5D034B00888845 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		04F8E3339B7C7AC947F838EE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RoadmapGoals/RoadmapGoals.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = QQRH2ZMA5X;
 				ENABLE_PREVIEWS = YES;
@@ -308,10 +434,87 @@
 			};
 			name = Debug;
 		};
+		642709EA2E5D034B00888845 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = RoadmapGoalsWidgetExtension.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QQRH2ZMA5X;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RoadmapGoalsWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RoadmapGoalsWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pisoms.RoadmapGoals.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		642709EB2E5D034B00888845 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = RoadmapGoalsWidgetExtension.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QQRH2ZMA5X;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RoadmapGoalsWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RoadmapGoalsWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pisoms.RoadmapGoals.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		81A1B7468B8C302BCD027FBB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = RoadmapGoals/RoadmapGoals.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = QQRH2ZMA5X;
 				ENABLE_PREVIEWS = YES;
@@ -345,6 +548,15 @@
 			buildConfigurations = (
 				49A6035F8913B576FA7B5481 /* Debug */,
 				255903B0CF439BB54EDA3137 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		642709ED2E5D034B00888845 /* Build configuration list for PBXNativeTarget "RoadmapGoalsWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				642709EA2E5D034B00888845 /* Debug */,
+				642709EB2E5D034B00888845 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
