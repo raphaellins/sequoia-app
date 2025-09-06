@@ -152,7 +152,7 @@ Potential features for future versions:
 - Export/import functionality
 - Advanced analytics and reporting
 - Dark mode optimization
-- Widget support
+- Audio playback and scheduling
 
 ## License
 

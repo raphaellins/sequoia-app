@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var goalStore = GoalStore()
+    @StateObject private var audioStore = AudioStore()
     
     var body: some View {
         TabView {
@@ -15,8 +16,15 @@ struct ContentView: View {
             RoadmapView()
                 .environmentObject(goalStore)
                 .tabItem {
-                    Image(systemName: "chart.timeline.xaxis")
+                    Image(systemName: "chart.line.uptrend.xyaxis")
                     Text("Roadmap")
+                }
+            
+            AudioListView()
+                .environmentObject(audioStore)
+                .tabItem {
+                    Image(systemName: "music.note")
+                    Text("Audio")
                 }
         }
         .accentColor(.blue)

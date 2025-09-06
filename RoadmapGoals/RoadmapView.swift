@@ -85,7 +85,7 @@ struct RoadmapView: View {
                 
                 if filteredGoals.isEmpty {
                     VStack(spacing: 20) {
-                        Image(systemName: "chart.timeline.xaxis")
+                        Image(systemName: "chart.line.uptrend.xyaxis")
                             .font(.system(size: 60))
                             .foregroundColor(.gray)
                         Text("No goals in this timeframe")
