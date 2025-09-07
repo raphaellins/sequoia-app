@@ -6,7 +6,7 @@ import HomeKit
 import UserNotifications
 import BackgroundTasks
 
-class AudioStore: NSObject, ObservableObject {
+class AudioStore: NSObject, ObservableObject, UNUserNotificationCenterDelegate {
     @Published var audioFiles: [AudioFile] = []
     @Published var isPlaying: Bool = false
     @Published var currentAudioFile: AudioFile?
@@ -24,6 +24,7 @@ class AudioStore: NSObject, ObservableObject {
     override init() {
         super.init()
         print("🎵 AudioStore.init: Starting initialization")
+        setupAudioSession()
         loadAudioFiles()
         setupHomeKit()
         setupScheduling()
@@ -33,6 +34,22 @@ class AudioStore: NSObject, ObservableObject {
     
     private func setupHomeKit() {
         homeKitManager = HomeKitManager()
+    }
+    
+    private func setupAudioSession() {
+        do {
+            let audioSession = AVAudioSession.sharedInstance()
+            
+            // Configure for background playback
+            try audioSession.setCategory(.playback, mode: .default, options: [.allowAirPlay, .allowBluetooth])
+            
+            // Activate the audio session
+            try audioSession.setActive(true)
+            
+            print("🔊 AudioStore.setupAudioSession: Audio session configured for background playback")
+        } catch {
+            print("❌ AudioStore.setupAudioSession: Failed to configure audio session: \(error)")
+        }
     }
     
     deinit {
@@ -166,6 +183,10 @@ class AudioStore: NSObject, ObservableObject {
     
     private func playAudioLocally(_ audioFile: AudioFile, fileURL: URL) {
         do {
+            // Ensure audio session is active for background playback
+            let audioSession = AVAudioSession.sharedInstance()
+            try audioSession.setActive(true)
+            
             // Create new player
             audioPlayer = try AVAudioPlayer(contentsOf: fileURL)
             audioPlayer?.delegate = self
@@ -366,6 +387,11 @@ class AudioStore: NSObject, ObservableObject {
     }
     
     private func setupScheduling() {
+        // Register background task
+        BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.example.RoadmapGoals.audio-scheduling", using: nil) { task in
+            self.handleBackgroundAudioScheduling(task: task as! BGAppRefreshTask)
+        }
+        
         // Start a timer that checks for scheduled audio every 30 seconds
         schedulingTimer = Timer.scheduledTimer(withTimeInterval: 30.0, repeats: true) { [weak self] _ in
             self?.checkScheduledAudio()
@@ -375,7 +401,31 @@ class AudioStore: NSObject, ObservableObject {
         checkScheduledAudio()
     }
     
+    private func handleBackgroundAudioScheduling(task: BGAppRefreshTask) {
+        // Schedule the next background task
+        scheduleBackgroundTask()
+        
+        // Check for scheduled audio
+        checkScheduledAudio()
+        
+        // Mark task as completed
+        task.setTaskCompleted(success: true)
+    }
+    
+    private func scheduleBackgroundTask() {
+        let request = BGAppRefreshTaskRequest(identifier: "com.example.RoadmapGoals.audio-scheduling")
+        request.earliestBeginDate = Date(timeIntervalSinceNow: 15 * 60) // 15 minutes from now
+        
+        do {
+            try BGTaskScheduler.shared.submit(request)
+            print("🔄 Background task scheduled for audio scheduling")
+        } catch {
+            print("❌ Failed to schedule background task: \(error)")
+        }
+    }
+    
     private func requestNotificationPermission() {
+        UNUserNotificationCenter.current().delegate = self
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
             if granted {
                 print("🔔 Notification permission granted")
@@ -390,6 +440,13 @@ class AudioStore: NSObject, ObservableObject {
         content.title = "Audio Scheduled"
         content.body = "'\(audioFile.name)' is about to play"
         content.sound = .default
+        
+        // Add user info to help with background playback
+        content.userInfo = [
+            "audioFileId": audioFile.id.uuidString,
+            "audioFileName": audioFile.name,
+            "deviceType": audioFile.targetDevice?.displayName ?? "iPhone"
+        ]
         
         let triggerDate = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: date)
         let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
@@ -593,6 +650,33 @@ class AudioStore: NSObject, ObservableObject {
         formatter.allowedUnits = [.useGB, .useMB]
         formatter.countStyle = .file
         return formatter.string(fromByteCount: totalStorageUsed)
+    }
+}
+
+// MARK: - UNUserNotificationCenterDelegate
+
+extension AudioStore {
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        let userInfo = response.notification.request.content.userInfo
+        
+        if let audioFileIdString = userInfo["audioFileId"] as? String,
+           let audioFileId = UUID(uuidString: audioFileIdString),
+           let audioFile = audioFiles.first(where: { $0.id == audioFileId }) {
+            
+            print("🔔 Notification received for audio file: \(audioFile.name)")
+            
+            // Trigger audio playback
+            DispatchQueue.main.async {
+                self.playScheduledAudio(audioFile)
+            }
+        }
+        
+        completionHandler()
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        // Show notification even when app is in foreground
+        completionHandler([.alert, .sound, .badge])
     }
 }
 

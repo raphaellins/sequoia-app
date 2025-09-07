@@ -54,5 +54,9 @@
 	<string>playback</string>
 	<key>NSHomeKitUsageDescription</key>
 	<string>This app uses HomeKit to discover and control HomePod speakers for audio playback.</string>
+	<key>BGTaskSchedulerPermittedIdentifiers</key>
+	<array>
+		<string>com.example.RoadmapGoals.audio-scheduling</string>
+	</array>
 </dict>
 </plist>
